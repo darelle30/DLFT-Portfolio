@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom underline animation for nav links */
+
+
+.html{
+  scroll-behavior: smooth;
+  
+}
+.nav-link {
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    right: 0;
+    bottom: 0;
+    background-color: red; /* Customize the underline color */
+    transition: width 500ms ease;
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  /* Flip animation when the image becomes visible */
+.rotate-flip {
+  opacity: 0;
+  transform: rotateY(90deg); /* You can adjust to rotateX for vertical flip */
+}
+
+
+
+@keyframes spin {
+  from {
+    transform: rotate(90deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+.spin-once {
+  animation: spin 300ms ease-in-out;
+}
+
+/* Active class for smooth scrolling links */
+.active-link {
+  color: red; /* Your desired active color */
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1024px) {
+  .lg-bg-gradient {
+    background: linear-gradient(180deg, #edfff0 25%, #b9edc0 55%, #FFFFFF 100%);
+  }
+}
+
+
+
+
+
+
+
+
+  
